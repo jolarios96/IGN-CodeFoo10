@@ -1,0 +1,66 @@
+html {
+  background-color: black;
+
+  margin: 0;
+  padding: 0;
+
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: none;
+}
+
+header {
+  width: 75%;
+  height: 100px;
+
+  background-color: green;
+
+  margin: 0 auto;
+
+  display: block;
+  overflow: auto;
+}
+
+header h1 {
+  color: white;
+}
+
+footer {
+  width: 75%;
+  height: 100px;
+
+  background-color: green;
+
+  margin: 0 auto;
+  margin-top: 15px;
+
+  display: block;
+  overflow: auto;
+}
+
+article {
+  width: 75%;
+
+  margin: 0 auto;
+  margin-top: 15px;
+
+  padding: 10px 10px 10px 10px;
+
+  color: white;
+  background-color: darkslateblue;
+
+  box-sizing: border-box;
+  border-color: white;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 25px;
+}
+
+.wrapper {
+  background-color: white;
+}
