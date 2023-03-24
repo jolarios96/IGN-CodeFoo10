@@ -1,9 +1,11 @@
 // import "./App.css";
+import Poll from "./components/Poll";
+// import Item from "./components/Item";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Poll />
     </div>
   );
 }
