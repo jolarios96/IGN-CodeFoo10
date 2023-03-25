@@ -1,12 +1,12 @@
 // import "./App.css";
 import Poll from "./components/Poll";
-import Item from "./components/Item";
+import Article from "./components/Article";
 
 function Main() {
   return (
     <main className="Main">
-      <Item />
-      <Item>
+      <Article />
+      <Article>
         <h2>This is an Article containing a Poll.</h2>
         <p>This is the Article's description.</p>
         <Poll
@@ -14,12 +14,11 @@ function Main() {
           query="Pick a choice."
           choices={["Choice A", "Choice B", "Choice C", "Choice D"]}
         />
-      </Item>
-      <Item />
-      <Item>
+      </Article>
+      <Article>
         <h1>This Article contains stuff.</h1>
         <p>This is the Article's description.</p>
-      </Item>
+      </Article>
     </main>
   );
 }
