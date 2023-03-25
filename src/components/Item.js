@@ -1,11 +1,15 @@
 import PropTypes from "prop-types";
 
 function Item(props) {
-  return <div className="Item">{props.content}</div>;
+  return (
+    <article className="Item">
+      {props.children ? props.children : <h2>{props.content}</h2>}
+    </article>
+  );
 }
 
 Item.defaultProps = {
-  content: "Content Failed to Load",
+  content: "Placeholder Item",
 };
 
 Item.propTypes = {
