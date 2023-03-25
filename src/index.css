@@ -15,7 +15,7 @@ code {
     monospace;
 }
 
-#root > * {
+/* body > * {
   overflow: auto;
 
   width: 75%;
@@ -29,4 +29,39 @@ code {
 
   border: darkblue 10px solid;
   border-radius: 15px;
+} */
+
+header,
+footer,
+article {
+  overflow: auto;
+
+  margin: 0 auto;
+  margin-top: 20px;
+
+  padding: 0 0 0 10px;
+
+  background-color: darkslateblue;
+
+  border: darkblue 10px solid;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+header {
+  margin-top: 0;
+}
+
+.Poll {
+  overflow: auto;
+
+  margin: 10px 0;
+
+  padding: 0;
+
+  background-color: darkslateblue;
+
+  border: darkblue 10px solid;
+  border-left: 0px;
+  border-right: 0px;
 }
