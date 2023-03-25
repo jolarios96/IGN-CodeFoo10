@@ -4,8 +4,13 @@ const Poll = (props) => {
   const choices = props.choices;
   const listChoices = choices.map((choice, index) => (
     <div key={index}>
-      <input type="radio" id={choice} name="choice" value={choice} />
-      <label for={choice} className="toggle-label">
+      <input
+        type="radio"
+        id={choice}
+        name="choice"
+        value={choice.charAt(0).toUpperCase()}
+      />
+      <label htmlFor={choice} className="toggle-label">
         {choice}
       </label>
       <br />
@@ -30,24 +35,6 @@ const Poll = (props) => {
           {/* <input name="choice" type="hidden" value=""></input> */}
         </fieldset>
       </form>
-
-      {/* <form className="form" action="#">
-        <fieldset
-          className="choices"
-          role="radiogroup"
-          aria-labelledby="choice"
-        >
-          <legend>{props.query}</legend>
-          <input type="radio" id="1" name="1" value="1" />
-          <label for="1" className="toggle-label">
-            Option 1
-          </label>
-          <input type="radio" id="2" name="2" value="2" />
-          <label for="2" className="toggle-label">
-            Option 2
-          </label>
-        </fieldset>
-      </form> */}
     </div>
   );
 };
