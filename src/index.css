@@ -50,6 +50,11 @@ article {
 
 header {
   margin-top: 0;
+  border-top: 0;
+}
+
+footer {
+  border-bottom: 0;
 }
 
 .Poll {
