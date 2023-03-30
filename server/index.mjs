@@ -11,8 +11,27 @@ const typeDefs = `#graphql
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
   # This "Poll" type defines the queryable fields for every poll in our data source.
 
+  type Article {
+    id: Int!
+    author: String
+    title: String
+    content: String
+    # videos: [Videos]
+    # images: [Images]
+    polls: [Poll]
+  }
+
+  # type Video {
+  #   id: Int!
+  #   link: String!
+  # }
+
+  # type Image {
+  #   id: Int!
+  #   link: String!
+  # }
+
   type Poll {
-    # id: ID!
     id: Int!
     title: String
     query: String
