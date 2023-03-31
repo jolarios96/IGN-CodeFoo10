@@ -1,46 +1,9 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-// import { typeDefs, resolvers } from "./graphql/index.js";
-// console.log(testVar);
+import { typeDefs, resolvers } from "./server/index.js";
 
-import { typeDefs } from "./graphql/index.js";
-import { resolvers } from "./graphql/index.js";
-
-// const typeDefs = `#graphql
-//   type Article {
-//     id: Int!
-//     author: String
-//     title: String
-//     content: String
-//     # videos: [Videos]
-//     # images: [Images]
-//     polls: [Poll]
-//   }
-
-//   type Poll {
-//     id: Int!
-//     title: String
-//     query: String
-//     choices: [String]
-//     results: [Int]
-//     totalVotes: Int
-//   }
-
-//   type Query {
-//     polls: [Poll]
-//     poll(id: Int!): Poll
-//   }
-
-// `;
-
-// const resolvers = {
-//   Query: {
-//     polls: () => polls,
-//     poll(parent, args, contextValue, info) {
-//       return polls.find((poll) => poll.id === args.id);
-//     },
-//   },
-// };
+// import { typeDefs } from "./graphql/index.js";
+// import { resolvers } from "./graphql/index.js";
 
 const polls = [
   {
@@ -64,8 +27,6 @@ const polls = [
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  // introspection: true,
-  // playground: true,
 });
 
 const { url } = await startStandaloneServer(server, {
