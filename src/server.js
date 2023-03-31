@@ -2,9 +2,6 @@ import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { typeDefs, resolvers } from "./server/index.js";
 
-// import { typeDefs } from "./graphql/index.js";
-// import { resolvers } from "./graphql/index.js";
-
 const polls = [
   {
     id: 1,
