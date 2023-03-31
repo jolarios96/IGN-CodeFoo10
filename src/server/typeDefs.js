@@ -1,16 +1,41 @@
-// import { gql } from "graphql-tag";
-import { Poll } from "./Poll/index.js";
-
 const typeDefs = `#graphql
+  type Success {
+    isSuccess: Boolean
+    message: String!
+  }
+
   type Poll {
-    ${Poll.types}
+    id: Int!
+    radioName: String!
+    title: String!
+    query: String!
+    choices: [String!]
+    results: [Int]
+    totalVotes: Int
+  }
+  type Mutation {
+    updatePoll(id: Int!,
+    results: [Int]
+  ): Poll!
+  createPoll(id: Int!): Success
+  deletePoll(id: Int!): Success
   }
   type Query {
-    ${Poll.queries}
+    polls: [Poll]
+    poll(id: Int!): Poll
   }
-  # type Mutation {
-  #   ${Poll.mutations}
-  # }
+  input NewPoll {
+    id: Int!
+    title: String!
+    query: String
+    choices: [String!]
+    results: [Int!]
+  }
+
+  input PollUpdate{
+    id: Int!
+    results: [Int!]
+  }
 `;
 
 export default typeDefs;

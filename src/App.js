@@ -1,12 +1,18 @@
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import Poll from "./components/Poll.js";
+import Poll from "./components/Poll/Poll.js";
 import Article from "./components/Article.js";
-import { default as Queries } from "./queries/index.js";
+
+const client = new ApolloClient({
+  uri: "http://localhost:4000/",
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <>
+    <ApolloProvider client={client}>
       <Header />
       <main id="Main">
         {/* <Article>
@@ -18,11 +24,11 @@ function App() {
       </Article> */}
 
         <Article>
-          <Queries.PollQueries.GetPollById id={1} />
+          <Poll id={1} />
         </Article>
 
         <Article>
-          <Queries.PollQueries.GetPollById id={2} />
+          <Poll id={2} />
         </Article>
 
         {/* <Article>
@@ -30,7 +36,7 @@ function App() {
       </Article> */}
       </main>
       <Footer />
-    </>
+    </ApolloProvider>
   );
 }
 
