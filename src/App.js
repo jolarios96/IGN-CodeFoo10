@@ -24,9 +24,9 @@ function App() {
           <Poll id={2} />
         </Article>
 
-        {/* <Article>
-        <button onClick={createArticle}>Click Me</button>
-      </Article> */}
+        <Article>
+          <Poll id={3} />
+        </Article>
       </main>
       <Footer />
     </ApolloProvider>
