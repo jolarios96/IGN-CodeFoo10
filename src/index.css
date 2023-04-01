@@ -1,3 +1,7 @@
+a {
+  color: white;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -6,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: slategray;
+  background-image: url(./assets/backgrounds/dark-paths.png);
   color: white;
 }
 
@@ -15,58 +19,111 @@ code {
     monospace;
 }
 
-/* body > * {
+#main {
+  overflow: auto;
+
+  width: 70%;
+
+  margin: 0 auto;
+  margin-top: 20px;
+
+  padding: 10px 10px;
+
+  background-color: darkslateblue;
+  border: darkblue 10px solid;
+  border-radius: 15px;
+}
+
+header,
+footer {
+  overflow: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 0 0 10px;
+  background-color: darkslateblue;
+  border: darkblue 2px solid;
+  border-left: 0px;
+  border-right: 0px;
+
+  background-image: url("./assets/backgrounds/vintage-wallpaper.png");
+}
+
+#Header {
+  height: 90px;
+  margin-top: 0;
+  border-top: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+#Footer {
+  min-height: 200px;
+  border-bottom: 0;
+
+  padding-top: 75px;
+}
+
+.footer > a {
+  width: 160px;
+}
+
+.footer-img {
+  height: 15%;
+  width: 15%;
+  /* min-height: 3rem; */
+  min-width: 10rem;
+}
+
+#Brand-Flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brand-wrapper {
+  width: 50%;
+}
+
+.brand-1 {
+  position: relative;
+  left: 40%;
+}
+.brand-2 {
+  position: relative;
+  left: 30%;
+}
+
+main > * {
   overflow: auto;
 
   width: 75%;
-
   margin: 0 auto;
   margin-top: 20px;
-
-  padding: 0 10px;
+  padding: 10px 10px;
 
   background-color: darkslateblue;
-
   border: darkblue 10px solid;
   border-radius: 15px;
-} */
+}
 
-header,
-footer,
 article {
   overflow: auto;
-
   margin: 0 auto;
   margin-top: 20px;
-
   padding: 0 0 0 10px;
-
   background-color: darkslateblue;
+  border: rgb(0, 0, 100) 2px solid;
+  border-left: 1px;
+  border-right: 5px;
 
-  border: darkblue 10px solid;
-  border-left: 0px;
-  border-right: 0px;
-}
-
-header {
-  margin-top: 0;
-  border-top: 0;
-}
-
-footer {
-  border-bottom: 0;
+  background-image: url("./assets/backgrounds/vintage-wallpaper.png");
 }
 
 .Poll {
   overflow: auto;
-
-  margin: 10px 0;
-
-  padding: 0;
-
-  background-color: darkslateblue;
-
-  border: darkblue 10px solid;
-  border-left: 0px;
-  border-right: 0px;
+  margin: 10px auto;
+  padding-bottom: 2rem;
+  width: 50%;
+  /* background-color: darkslateblue; */
 }

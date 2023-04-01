@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <header>
-      <h1>IGN CodeFoo10 (Header)</h1>
+    <header id="Header">
+      <h1>Foobar Poll Hosting</h1>
     </header>
   );
 };
