@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Poll from "./components/Poll/Poll.js";
 import Article from "./components/Article.js";
+// import GetPolls from "./components/Poll/GetPolls.js";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/",
@@ -15,14 +16,6 @@ function App() {
     <ApolloProvider client={client}>
       <Header />
       <main id="Main">
-        {/* <Article>
-        <h1>
-          The Full List!
-          <br />
-          <GetPolls />
-        </h1>
-      </Article> */}
-
         <Article>
           <Poll id={1} />
         </Article>

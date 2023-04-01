@@ -1,8 +1,7 @@
 const typeDefs = `#graphql
-  type Success {
-    isSuccess: Boolean
-    message: String!
-  }
+  # type Polls: {
+  #   [Poll]
+  # }
 
   type Poll {
     id: Int!
@@ -10,31 +9,59 @@ const typeDefs = `#graphql
     title: String!
     query: String!
     choices: [String!]
-    results: [Int]
-    totalVotes: Int
+    results: Results
+    totalVotes: TotalVotes
   }
-  type Mutation {
-    updatePoll(id: Int!,
-    results: [Int]
-  ): Poll!
-  createPoll(id: Int!): Success
-  deletePoll(id: Int!): Success
+
+  type Results {
+    results: [Int!]
   }
+
+  type TotalVotes {
+    totalVotes: Int!
+  }
+
+  type Success {
+    isSuccess: Boolean
+    message: String!
+  }
+
   type Query {
     polls: [Poll]
     poll(id: Int!): Poll
   }
+
+  type Mutation {
+    # Updates Poll based on User's choice
+    updatePoll(id: Int!,
+      choice: [Int!]
+      ): updatePollResponse!
+    createPoll(id: Int!): Success
+    deletePoll(id: Int!): Success
+    incrementVotes(id: Int!): Success      
+  }
+
+  type updatePollResponse {
+    code: Int!
+    success: Boolean!
+    message: String!
+    # Updates Results on success
+    results: Results!
+    # Increments Vote on success
+    totalVotes: TotalVotes!
+  }
+
   input NewPoll {
     id: Int!
     title: String!
     query: String
     choices: [String!]
-    results: [Int!]
+    # results: Results
   }
 
-  input PollUpdate{
+  input PollUpdate {
     id: Int!
-    results: [Int!]
+    # results: [Int]!
   }
 `;
 

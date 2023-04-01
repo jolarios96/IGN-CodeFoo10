@@ -10,7 +10,12 @@ const GET_POLL = gql`
       title
       query
       choices
-      results
+      results {
+        results
+      }
+      totalVotes {
+        totalVotes
+      }
     }
   }
 `;
